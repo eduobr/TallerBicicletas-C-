@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55138523-C164-4F0C-9949-0D0E2D9C527B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaVista</RootNamespace>
+    <AssemblyName>CapaVista</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bodeguero\BodegueroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bodeguero\BodegueroControl.Designer.cs">
+      <DependentUpon>BodegueroControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodeguero\FormDespacharVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bodeguero\FormDespacharVenta.Designer.cs">
+      <DependentUpon>FormDespacharVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodeguero\TarjetaCarritoBod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bodeguero\TarjetaCarritoBod.Designer.cs">
+      <DependentUpon>TarjetaCarritoBod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodeguero\TarjetaProdControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bodeguero\TarjetaProdControl.Designer.cs">
+      <DependentUpon>TarjetaProdControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bodeguero\TarjetaProvControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bodeguero\TarjetaProvControl.Designer.cs">
+      <DependentUpon>TarjetaProvControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cajero\CajeroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cajero\CajeroControl.Designer.cs">
+      <DependentUpon>CajeroControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cajero\Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajero\Comprobante.Designer.cs">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewDisableButtonCell.cs" />
+    <Compile Include="DataGridViewDisableButtonColumn.cs" />
+    <Compile Include="Iniciar_Sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Iniciar_Sesion.Designer.cs">
+      <DependentUpon>Iniciar_Sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServicioMasterBikes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\FormCambiarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\FormCambiarProducto.Designer.cs">
+      <DependentUpon>FormCambiarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\FormMotivoCambiarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\FormMotivoCambiarProd.Designer.cs">
+      <DependentUpon>FormMotivoCambiarProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\FormularioCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\FormularioCompra.Designer.cs">
+      <DependentUpon>FormularioCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\TarjetaCarritoProdControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vendedor\TarjetaCarritoProdControl.Designer.cs">
+      <DependentUpon>TarjetaCarritoProdControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\TarjetaProdControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vendedor\TarjetaProdControl.Designer.cs">
+      <DependentUpon>TarjetaProdControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\VendedorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vendedor\VendedorControl.Designer.cs">
+      <DependentUpon>VendedorControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bodeguero\BodegueroControl.resx">
+      <DependentUpon>BodegueroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodeguero\FormDespacharVenta.resx">
+      <DependentUpon>FormDespacharVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodeguero\TarjetaCarritoBod.resx">
+      <DependentUpon>TarjetaCarritoBod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodeguero\TarjetaProdControl.resx">
+      <DependentUpon>TarjetaProdControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bodeguero\TarjetaProvControl.resx">
+      <DependentUpon>TarjetaProvControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajero\CajeroControl.resx">
+      <DependentUpon>CajeroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajero\Comprobante.resx">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Iniciar_Sesion.resx">
+      <DependentUpon>Iniciar_Sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vendedor\FormCambiarProducto.resx">
+      <DependentUpon>FormCambiarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\FormMotivoCambiarProd.resx">
+      <DependentUpon>FormMotivoCambiarProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\FormularioCompra.resx">
+      <DependentUpon>FormularioCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\TarjetaCarritoProdControl.resx">
+      <DependentUpon>TarjetaCarritoProdControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\TarjetaProdControl.resx">
+      <DependentUpon>TarjetaProdControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\VendedorControl.resx">
+      <DependentUpon>VendedorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaAccesoDatos.Cl_Producto.datasource">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Detalle_Venta.datasource" />
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Municipalidad.datasource" />
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Persona.datasource" />
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Producto.datasource" />
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Trabajador.datasource" />
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Usuario.datasource" />
+    <None Include="Properties\DataSources\CapaLogicaNegocios.ServicioMasterBikes.Cl_Venta.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServicioMasterBikes\Service1.wsdl" />
+    <None Include="Service References\ServicioMasterBikes\Servicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioMasterBikes\Servicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioMasterBikes\Servicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="img\iconos\cart.png" />
+    <Content Include="img\iconos\online-shop.png" />
+    <None Include="Service References\ServicioMasterBikes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicioMasterBikes\configuration.svcinfo" />
+    <None Include="Service References\ServicioMasterBikes\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicioMasterBikes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaAccesoDatos\CapaAccesoDatos.csproj">
+      <Project>{9E0A7707-A8B5-45BF-A57F-8F8B3B877489}</Project>
+      <Name>CapaAccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogicaNegocios\CapaLogicaNegocios.csproj">
+      <Project>{e21a6861-9023-4829-b057-35a6820c3d31}</Project>
+      <Name>CapaLogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
